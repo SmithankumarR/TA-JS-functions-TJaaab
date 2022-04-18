@@ -8,10 +8,34 @@
   * [ ] Add an additional argument to the function that takes the conversion rate of human to dog years.
 */
 
-function calculateDogAge() {
+function calculateDogAge(age) {
   // Your code goes here
+  if( age <= 1 ) {
+    return `dog's age is 15 year according to humans age`;
+  } else if (age <= 2){
+    return `dog's age is 30 year according to humans age`;
+
+  } else if (age <= 3){
+    return `dog's age is 45 year according to humans age`;
+
+  } else if (age <= 4){
+    return `dog's age is 60 year according to humans age`;
+
+  } else if (age <= 5){
+    return `dog's age is 75 year according to humans age`;
+
+  } else if (age <= 6){
+    return `dog's age is  90  year according to humans age`;
+
+  } else if (age <= 7){
+    return `dog's age is 100 year according to humans age`;
+
+  } else {
+    return `invalid please enter the number btw 1 - 7`;
+  }
 }
 
+calculateDogAge(4);
 /*
 2. 🎖Write a function named calculateMoviesToWatch that:
   * [ ] takes 2 arguments: age, number of movies you watch every week. (take 4 weeks per month)
@@ -19,8 +43,16 @@ function calculateDogAge() {
   * [ ] Return the total number of movie you will watch.
 */
 
-function calculateMoviesToWatch() {
+function calculateMoviesToWatch(age, number) {
   // Your code goes here
+   const max_age = 100;
+   for(let i = age; i < max_age; i++) {
+     let current_age = max_age - age ;
+     let movie = (number * 48)
+     if(age <= 100) {
+       return `your age is ${current_age} hence you can watch ${movie}`
+     }
+   }
 }
 
 /*
