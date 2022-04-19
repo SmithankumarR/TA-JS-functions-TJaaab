@@ -74,7 +74,7 @@ function calculateBMI(weight, height) {
   }
 }
 
-calculateBMI(60,4.5)
+calculateBMI(60,1.5);
 /* 3. appropiateDrinks
 
 Create a function that take the age are return the appropiate drink based on these conditions:
@@ -112,12 +112,12 @@ Twist is when user passes anything other than number, or string value you should
 */
 
 function sum(input1, input2) {
- if(input1 === "number" || input2 === "number") {
+ if(typeof input1 =="number" && typeof input2 == "number") {
    return input1 + input2;
- } else if( input1 === String  || input2 === String) {
+ } else if( typeof input1 == "String" && typeof input2 == "String") {
    return input1 + input2;
  } else {
-   alert `Enter valid values`
+   return `Enter valid values`;
  } 
 }
 // Function Test
