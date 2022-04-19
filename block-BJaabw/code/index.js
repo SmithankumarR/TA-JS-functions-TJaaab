@@ -11,13 +11,16 @@ minToSec(2) ➞ 120
 */
 
 // - Write a Function Decleration for above problem
-function minToSec() {
+function minToSec(m) {
   // Your code
+  return m * 60;
 }
 // - Execute the function with required parameter
-
+let time = minToSec(10);
+alert(time);
 /* 2. 
-Create a function named isInRange which validates whether a number n is exclusively within the bounds of lower and upper.
+Create a function named isInRange which validates whether a number n is exclusively 
+within the bounds of lower and upper.
 Return true and false based on that.
 
 The function accepts three parameter lower, upper and the number.
@@ -26,17 +29,24 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
-function isInRange() {
+function isInRange(lower, upper, num) {
   // Your code
+  if (num >= lower || num <= upper) {
+    return true;
+  } else {
+    return false;
+  }
+
 }
 // - Execute the function with required parameter
-
+isInRange(2, 40, 35);
 /* 2. calculateBMI
 
 
 Take two arguments weight and height and return `Underweight`, `Normal` etc based on data.
 
-Body mass index(BMI) is calculated as follows: bmi = weight / (height x height). Write a function which calculates bmi.
+Body mass index(BMI) is calculated as follows: bmi = weight / (height x height). 
+Write a function which calculates bmi.
 BMI is used to broadly define different weight groups.
 Check if a person is underweight, normal, overweight or obese based the information given below.
 
@@ -48,11 +58,23 @@ Overweight: BMI is 25 to 29.9
 Obese: BMI is 30 or more
 
 */
-
-function calculateBMI() {
-  // Your code
+alert(`please enter  height in feet and weight in kg to check your BMI report`)
+function calculateBMI(weight, height) {
+  bmi = weight / (height * height);
+  if (bmi <= 18.5) {
+    return `Underweight`;
+  } else if (bmi >= 18.5 || bmi <= 24.5) {
+    return `Normal`;
+  } else if (bmi >= 25 || bmi <= 29.9) {
+    return `Overweight`;
+  } else if (bmi >= 30) {
+    return `Obese`
+  } else {
+    return bmi;
+  }
 }
 
+calculateBMI(60,4.5)
 /* 3. appropiateDrinks
 
 Create a function that take the age are return the appropiate drink based on these conditions:
@@ -64,10 +86,20 @@ Create a function that take the age are return the appropiate drink based on the
 
 */
 
-function appropiateDrinks() {
-  // Your code
+function appropiateDrinks(age) {
+if( age < 14) {
+  return "drink fruit juice" ;
+} else if(age < 18) {
+  return "drink soda";
+} else if (age < 21) {
+  return "drink fruit-flavored beer";
+} else if( age >= 21) {
+  return "drink throat-piercing vodka";
+} else {
+  return " inapporiate age"
 }
-
+ }
+appropiateDrinks(40);
 /* 4. Add two numers or string
 
 Write a function that accepts two numbers or string and returns the sum of the numbers and concatenation of the strings.
@@ -79,10 +111,15 @@ Twist is when user passes anything other than number, or string value you should
 
 */
 
-function sum() {
-  // Your code
+function sum(input1, input2) {
+ if(input1 === "number" || input2 === "number") {
+   return input1 + input2;
+ } else if( input1 === String  || input2 === String) {
+   return input1 + input2;
+ } else {
+   alert `Enter valid values`
+ } 
 }
-
 // Function Test
 sum(2, 4); // 4
 sum('Arya', 'Stark'); // "Arya Stark"
